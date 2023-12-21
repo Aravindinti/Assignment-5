@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <!--Refernce to side-matnav-->
+    <mat-icon (click)="s.toggle()">menu</mat-icon>
+   <app-header></app-header> 
+  </mat-toolbar>
+  <mat-sidenav-container >
+    
+    <mat-sidenav   #s opened="true" mode="over" >
+        <app-menu></app-menu>
+     </mat-sidenav>
+     <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    </mat-sidenav-container >
+    <app-footer></app-footer>
+<!--<app-login></app-login> -->
+<!--
+<app-register></app-register>
+<app-students></app-students>
+<app-sort></app-sort>
+<app-contactus></app-contactus>
+<app-aboutus></app-aboutus>
+-->
+

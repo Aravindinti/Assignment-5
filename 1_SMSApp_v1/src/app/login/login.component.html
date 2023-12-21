@@ -1,0 +1,26 @@
+<fieldset>
+    <legend>LOGIN</legend>
+    <form class="login-form" (ngSubmit)="perform_login()">
+        <mat-form-field>
+            <mat-label>
+                USERNAME:
+            </mat-label><br>
+            <input matInput required type="text" placeholder="username" name="username" [(ngModel)]="username"><br>
+            <mat-hint>4 characters minimum</mat-hint>
+            <br>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>
+              PASSWORD:
+            </mat-label>
+            <br>
+            <input matInput required type="password" placeholder="password" name="password" [(ngModel)]="password"><br>
+
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" type="submit " value="login">LOGIN</button>
+        <br>
+        <button mat-raised-button  type="reset">RESET</button><br>
+    </form>
+</fieldset>
+{{message}}

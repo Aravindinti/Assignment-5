@@ -1,0 +1,14 @@
+<form  (ngSubmit)="perform_update()">
+    <input type="number" [(ngModel)]="updatedStudent.rollno" name="rollno" readonly> <br>
+    <input type="text" [(ngModel)]="updatedStudent.name" name="name" readonly><br>
+
+    <input type="number" [(ngModel)]="updatedStudent.numberofAttempts" name="numberOfAttempts" ><br>
+
+    <input type="number" [(ngModel)]="updatedStudent.percentage" name="percentage" ><br>
+     <input type="text" [(ngModel)]="updatedStudent.subjectsLearning" name="subjectLearning" readonly><br>
+     
+
+
+<input type="submit" value="UPDATE">
+
+</form>

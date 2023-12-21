@@ -1,0 +1,26 @@
+<mat-radio-group>
+    <mat-radio-button (click)="sortByPercentage()">Percentage </mat-radio-button>
+    <mat-radio-button  (click)=" sortByAttempts()">NoOfAttempts </mat-radio-button>
+    <mat-radio-button (click)=" sortByNoOfsubLearning()"> SubjectsLearning</mat-radio-button>
+
+</mat-radio-group> 
+<div class ="answers">
+    <table>
+<thead>
+    <th>Roll No</th>
+    <th>StudentNamees</th>
+   <th>Number of Attempts</th>
+   <th>Percentage</th>
+   <th>Subjects</th>  
+</thead>
+<tbody>
+<tr *ngFor="let ss of percentages">
+    <td>{{ss.rollno}}</td>
+    <td>{{ss.name}}</td>
+    <td>{{ss.numberofAttempts}}</td>
+    <td>{{ss.percentage}}</td>
+    <td>{{ss.subjectsLearning}}</td></tr>
+</tbody>
+</table>
+
+</div>

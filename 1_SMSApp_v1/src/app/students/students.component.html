@@ -1,0 +1,67 @@
+<p>Students component</p>
+
+<table >
+  <thead>
+      <th>Roll No</th>
+      <th>StudentNamees</th>
+     <th>Number of Attempts</th>
+     <th>Percentage</th>
+     <th>Subjects</th>
+     <th>Action</th>    
+   </thead>
+<tbody>
+<tr *ngFor="let s of students">
+    <td>{{s.rollno}}</td>
+
+    <td>
+        {{s.name |uppercase}}
+    </td>
+    <td>
+        {{s.numberofAttempts}}
+    </td>
+    <td>
+        {{s.percentage/100 |percent}}
+    </td>
+    <td>
+        <ul *ngFor="let sub of s.subjectsLearning">
+            <li>
+           {{sub}}
+        </li></ul>
+       
+    </td>
+    <td>
+        <button class="btnDelete" (click)="deleteStudent(s.rollno)">Delete</button>
+        <button (click)="updateStudent(s)">Update</button>
+    </td>
+    </tr>
+</tbody>
+</table>
+    <span  [class]="colorClass" id="delete">{{message}}</span>
+    <div *ngIf="updateclicked">
+
+    <app-student-update [updatedStudent]="selectedStudent" (studentEmitter)="doUpdate($event)">
+
+        
+    </app-student-update>
+</div>
+    <!--
+    <table><thead>
+        <th>StudentNamees</th>
+         <th>Roll No</th>
+        <th>Number of Attempts</th>
+        <th>Percentage</th>
+        <th>Subjects</th>     
+      </thead>
+      <tbody>
+    <tr *ngFor="let ss of upstudent">
+        <td>{{ss.rollno}}</td>
+        <td>{{ss.name}}</td>
+        <td>{{ss.numberOfAttempts}}</td>
+        <td>{{ss.percentage}}</td>
+        <td>{{ss.subjectLearning}}</td>
+    </tr>
+</tbody>
+</table>
+-->
+<app-sort></app-sort>
+
